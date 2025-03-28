@@ -8,15 +8,19 @@ sub help {
     say "\tperl $0 <command> [options]";
     say "Available Commands:";
     say "\tbuild -> Assemble the static site.";
+    exit;
 }
 
 if (@ARGV == 0) {
     help;
 }
-elsif (shift @ARGV eq "build") {
+
+my $command = shift @ARGV;
+
+if ($command eq "build") {
     system("perl ./src/main.pl " . join(" ", @ARGV));
 }
 else {
-    say "Unrecognized command $ARGV[0]";
+    say "Unrecognized command $command";
     help;
 }
