@@ -17,5 +17,3 @@ my $hyp = new Hypatia(
 );
 
 $hyp->hello();
-
-say "pwd: ". `pwd`;

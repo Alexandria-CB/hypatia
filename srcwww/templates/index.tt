@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Sample Hypatia Page</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        [% PROCESS header.tt %]
+        <h1>Sample Hypatia Page</h1>
+        [% PROCESS footer.tt %]
     </body>
 </html>
